@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.kaepsis.library'
+version = '1.0-SNAPSHOT'
+description = "KaeLibrary"
+
+repositories {
+    mavenCentral()
+    maven {
+        name = "spigotmc-repo"
+        url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+}
+
+dependencies {
+    compileOnly 'org.spigotmc:spigot-api:1.21-R0.1-SNAPSHOT'
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
